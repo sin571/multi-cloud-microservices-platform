@@ -1,0 +1,9 @@
+# ansible/playbooks/configure.yml
+- name: Configure Kubernetes Nodes
+  hosts: k8s_nodes
+  tasks:
+    - name: Install Prometheus Node Exporter
+      apt:
+        name: prometheus-node-exporter
+        state: present
+

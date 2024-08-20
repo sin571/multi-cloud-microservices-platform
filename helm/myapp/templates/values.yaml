@@ -1,0 +1,18 @@
+# helm/myapp/values.yaml
+replicaCount: 3
+
+image:
+  repository: myapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 5000
+
+ingress:
+  enabled: false
+
+resources: {}
+
